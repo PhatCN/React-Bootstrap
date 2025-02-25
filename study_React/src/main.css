@@ -1,0 +1,108 @@
+.body{
+    background-color:lightcyan;
+}
+.bgr-header{
+   background-color: rgb(91, 202, 89); 
+}
+.bgr-header h1 {
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+.team-member-img {
+    margin-top: -60px;
+  }
+
+ /* ImageSlider.css */
+
+.slider-container {
+    width: 100%;
+    height: 50vh; /* Giảm chiều cao để tránh chiếm quá nhiều diện tích */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: lightcyan;
+}
+
+.swiper-container {
+    width: 75%;
+    height: 70vh; /* Giảm chiều cao */
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.slide-bgimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.caption {
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 0.8;
+}
+
+/* Thumbnail Slider */
+.nav-slider {
+    width: 20%;
+    height: 70vh; /* Đồng bộ chiều cao với slider chính */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-slider .swiper-slide {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    height: 20%; /* Chỉnh lại kích thước */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-slider .swiper-slide-active {
+    opacity: 1;
+    border: 2px solid white;
+}

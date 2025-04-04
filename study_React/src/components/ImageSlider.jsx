@@ -1,43 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Thumbs } from "swiper/modules";
+import { Navigation, Thumbs, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "../main.css";
-
-const slides = [
-  {
-    title: "Shaun Matthews",
-    caption:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    img: "https://images.unsplash.com/photo-1483985988355-763728e1935b",
-  },
-  {
-    title: "Alexis Berry",
-    caption:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    img: "https://images.unsplash.com/photo-1500643752441-4dc90cda350a",
-  },
-  {
-    title: "Billie Pierce",
-    caption:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    img: "https://images.unsplash.com/photo-1465408953385-7c4627c29435",
-  },
-  {
-    title: "Trevor Copeland",
-    caption:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    img: "https://images.unsplash.com/photo-1538329972958-465d6d2144ed",
-  },
-  {
-    title: "Bernadette Newman",
-    caption:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    img: "https://images.unsplash.com/photo-1583292650898-7d22cd27ca6f",
-  },
-];
+import dataSilde from "../data/dataSilde.js"
 
 const ImageSlider = () => {
   return (
@@ -45,11 +13,16 @@ const ImageSlider = () => {
       {/* Main Slider */}
       <Swiper
         loop={true}
-        modules={[Navigation, Thumbs]}
-        navigation
-        className="swiper-container"
+        modules={[Navigation,Thumbs, Pagination, Autoplay]}
+        autoplay={{
+          delay: 3000, // Thời gian chuyển slide (3 giây)
+          disableOnInteraction: false, // Giữ autoplay ngay cả khi user tương tác
+      }}
+      navigation={true}
+      pagination={{ clickable: true }}
+        className="swiper-container"       
       >
-        {slides.map((slide, index) => (
+        {dataSilde.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
               className="slide-bgimg"

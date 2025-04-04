@@ -5,9 +5,9 @@ function Footer() {
   return (
     <footer className="bg-dark text-white text-center py-3">
       <div className="container">
-        <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+        <p>Châu Nhuận Phát</p>
         <div>
-          <a href="#" className="text-white me-3"><FaFacebook size={24} /></a>
+          <a href="www.facebook.com/cnphat.157" className="text-white me-3"><FaFacebook size={24} /></a>
           <a href="#" className="text-white me-3"><FaLinkedin size={24} /></a>
           <a href="#" className="text-white"><FaGithub size={24} /></a>
         </div>

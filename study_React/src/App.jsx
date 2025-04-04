@@ -8,10 +8,12 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Team from "./components/Team";
 import Footer from "./components/Footer";
+import SlideBarToggle from "./components/SlideBarToggle";
 
 function App() {
   return (
     <div className="bg-header w-100">
+      <SlideBarToggle/>
       <Navbar />
       <Header />
       <div className="container-fluid mt-5">

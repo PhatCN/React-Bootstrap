@@ -2,8 +2,10 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+    
+    <nav className="bg-nav navbar navbar-expand-lg navbar-dark w-100">
       <div className="container">
+        
         <a className="navbar-brand" href="#">Trang chủ</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>

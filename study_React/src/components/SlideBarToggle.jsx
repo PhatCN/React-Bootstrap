@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import "../main.css";
 
 export default function SidebarToggle() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="d-flex">
-      {/* Nút Toggle */}
       <button
         className="btn btn-dark position-fixed"
         style={{ top: "10px", left: "10px", zIndex: "1050" }}
@@ -16,7 +16,6 @@ export default function SidebarToggle() {
         &#9776;
       </button>
 
-      {/* Sidebar */}
       <div
         className={`offcanvas offcanvas-start ${isOpen ? "show" : ""}`}
         tabIndex="-1"
@@ -34,17 +33,22 @@ export default function SidebarToggle() {
             <li className="list-group-item p-1 border-0 bg-light text-dark"
                 style={{ cursor: "pointer" }}
                 onClick={() => setIsOpen(false)}>
-              Home
+              <a className="texta" href="#home">Home</a>
             </li>
             <li className="list-group-item p-1 border-0 bg-light text-dark"
                 style={{ cursor: "pointer" }}
                 onClick={() => setIsOpen(false)}>
-              About
+              <a className="texta" href="#about">About</a>
             </li>
             <li className="list-group-item p-1 border-0 bg-light text-dark"
                 style={{ cursor: "pointer" }}
                 onClick={() => setIsOpen(false)}>
-              Contact
+              <a className="texta" href="#contact">Contact</a>
+            </li>
+            <li className="list-group-item p-1 border-0 bg-light text-dark"
+                style={{ cursor: "pointer" }}
+                onClick={() => setIsOpen(false)}>
+              <a className="texta" href="#team">Team</a>
             </li>
           </ul>
         </div>

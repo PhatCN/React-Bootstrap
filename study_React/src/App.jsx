@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Team from "./components/Team";
 import Footer from "./components/Footer";
 import SlideBarToggle from "./components/SlideBarToggle";
+import TimeLine from "./components/TimeLine";
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
         <Skills />
         <Projects />
         <Team />
+        <TimeLine/>
       </div>
+
       <Footer />
     </div>
   );

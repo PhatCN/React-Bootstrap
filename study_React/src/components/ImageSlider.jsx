@@ -15,12 +15,12 @@ const ImageSlider = () => {
         loop={true}
         modules={[Navigation,Thumbs, Pagination, Autoplay]}
         autoplay={{
-          delay: 3000, // Thời gian chuyển slide (3 giây)
-          disableOnInteraction: false, // Giữ autoplay ngay cả khi user tương tác
+          delay: 2500,
+          disableOnInteraction: false,
       }}
       navigation={true}
       pagination={{ clickable: true }}
-        className="swiper-container"       
+        className="swiper-container"
       >
         {dataSilde.map((slide, index) => (
           <SwiperSlide key={index}>

@@ -1,5 +1,6 @@
 import React from "react";
-import teamMembers from "../data/datateam.js"
+import teamData from "../data/datateam.js"
+
 
 function Team() {
   return (
@@ -7,7 +8,7 @@ function Team() {
       <div className="container">
         <h2 className="mb-5 pb-3">Our Team</h2>
         <div className="row justify-content-center">
-          {teamMembers.map((member, index) => (
+          {teamData.map((member, index) => (
             <div key={index} className="col-md-4 mb-5 d-flex align-items-stretch">
               <div className="card shadow p-4 bg-white text-dark border-0 rounded-lg position-relative w-100">
                 <div className="d-flex justify-content-center position-relative team-member-img">

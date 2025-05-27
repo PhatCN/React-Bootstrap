@@ -10,8 +10,8 @@ function Projects() {
           <div className="col-md-4">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">Dự án CCJ</h5>
-                <p className="card-text">Dự án outsource Nhật. Dự án làm về chế độ chăm sóc người cao tuổi ở Nhật Bản</p>
+                <h5 className="card-title">Dự án XXX</h5>
+                <p className="card-text">Một dự án Outsource Nhật. Dự án làm về chế độ chăm sóc người cao tuổi ở Nhật Bản (Kaigo)</p>
                 <p className="card-footer">(2019 ~ Hiện tại)</p>
               </div>
             </div>

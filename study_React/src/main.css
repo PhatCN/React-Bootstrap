@@ -1,5 +1,5 @@
 .body{
-    background-color:rgba(221, 235, 235, 0.254);
+    background-color:#FFFFFF;
     font-family: 'Arial', 'Helvetica', sans-serif;
 }
 .bg-nav
@@ -51,7 +51,7 @@
 
 .swiper-container {
     width: 75%;
-    height: 70vh; /* Giảm chiều cao */
+    height: 70vh;
 }
 
 .swiper-slide {
@@ -107,10 +107,10 @@
 /* Thumbnail Slider */
 .nav-slider {
     width: 20%;
-    height: 70vh; /* Đồng bộ chiều cao với slider chính */
+    height: 70vh;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px;  
 }
 
 .nav-slider .swiper-slide {
@@ -118,7 +118,7 @@
     opacity: 0.6;
     transition: opacity 0.3s ease;
     width: 100%;
-    height: 20%; /* Chỉnh lại kích thước */
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,4 +127,80 @@
 .nav-slider .swiper-slide-active {
     opacity: 1;
     border: 2px solid white;
+}
+.texta{
+    color: black;
+    text-decoration: none;
+}
+.texta:hover{
+    color:yellow;
+    background-color: red;
+}
+/* src/components/TimelineCard.css */
+/* Các kiểu chung cho thẻ dòng thời gian */
+.timeline-card {
+  border-radius: 15px; /* Bo tròn góc thẻ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ để tạo chiều sâu */
+  padding: 20px;
+  margin: 10px; /* Điều chỉnh lề để đảm bảo khoảng cách phù hợp trong bố cục của Chrono */
+  color: #333; /* Màu văn bản mặc định cho các phần tử kế thừa từ thẻ */
+  position: relative; /* Cho phép định vị nội bộ nếu cần */
+  min-width: 250px; /* Đảm bảo thẻ có chiều rộng tối thiểu */
+  max-width: 350px; /* Kiểm soát chiều rộng tối đa để dễ đọc */
+  font-family: sans-serif; /* Đảm bảo phông chữ nhất quán */
+}
+
+/* Kiểu cho phần tiêu đề thẻ (chứa biểu tượng và năm) */
+.timeline-card-header {
+  display: flex;
+  flex-direction: column; /* Xếp chồng biểu tượng lên trên năm */
+  align-items: center; /* Căn giữa nội dung theo chiều ngang */
+  padding-bottom: 15px;
+  border-top-left-radius: 15px; /* Bo tròn góc trên bên trái */
+  border-top-right-radius: 15px; /* Bo tròn góc trên bên phải */
+  margin: -20px -20px 20px -20px; /* Điều chỉnh lề để lấp đầy vùng padding của thẻ cha */
+  padding-top: 20px;
+}
+
+/* Kiểu cho vòng tròn bao quanh biểu tượng */
+.timeline-card-icon-circle {
+  width: 50px; /* Kích thước vòng tròn */
+  height: 50px;
+  border-radius: 50%; /* Làm cho nó tròn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Khoảng cách giữa biểu tượng và năm */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bóng cho vòng tròn biểu tượng */
+}
+
+/* Kiểu cho biểu tượng SVG bên trong vòng tròn */
+.timeline-card-icon {
+  width: 30px; /* Kích thước biểu tượng */
+  height: 30px;
+  fill: white; /* Màu biểu tượng */
+}
+
+/* Kiểu cho nhãn năm */
+.timeline-card-year {
+  font-size: 1.8em; /* Kích thước chữ lớn hơn */
+  font-weight: bold;
+  color: #fff; /* Màu chữ trắng cho năm */
+  margin: 0;
+}
+
+/* Kiểu cho văn bản chính (tiêu đề) */
+.timeline-card-main-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333; /* Màu chữ đậm cho tiêu đề */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Kiểu cho văn bản mô tả */
+.timeline-card-description {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #555; /* Màu chữ xám cho mô tả */
 }

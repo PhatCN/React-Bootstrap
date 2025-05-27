@@ -6,7 +6,7 @@ function About() {
     <section id="about" className="my-5 text-center w-100">
       <div className="container">
         <h2 className="mb-4">Giới thiệu</h2>
-        <p className="lead">ITO (Information Technology Outsourcing) là nhóm gia công phần mềm.</p>
+        <p className="lead">C N P (Châu Nhuận Phát)</p>
       </div>
 
       <ImageSlider/>

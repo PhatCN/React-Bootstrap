@@ -6,7 +6,8 @@ import "../main.css";
 
 const TimelineComponent = () => {
   return (
-    <div style={{ width: '80%', height: 'auto', margin: '50px auto' }}>
+    <div className='timeline-component'>
+    <div className='timeline-header-title'>Timeline nè</div>
       <Chrono
         items={timelineData}
         mode="VERTICAL_ALTERNATING"
@@ -17,9 +18,8 @@ const TimelineComponent = () => {
           titleColor: '#333',
           titleColorActive: '#333', 
         }}
-        hideControls
+        hideControls = {true}
       >
-        {/* Kết xuất các thành phần TimelineCard tùy chỉnh cho mỗi mục */}
         {timelineData.map((item) => (
           <TimelineCard key={item.id} data={item} />
         ))}

@@ -10,10 +10,12 @@ import Team from "./components/Team";
 import Footer from "./components/Footer";
 import SlideBarToggle from "./components/SlideBarToggle";
 import TimeLine from "./components/TimeLine";
+import ProgressBar from "./components/ProgressBar";
 
 function App() {
-  return (
+  return (  
     <div className="bg-header w-100">
+      <ProgressBar duration={2000} height={30}>
       <SlideBarToggle/>
       <Navbar />
       <Header />
@@ -24,8 +26,8 @@ function App() {
         <Team />
         <TimeLine/>
       </div>
-
       <Footer />
+    </ProgressBar>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 const teamMembers = [
-    { id: 1, name: "Nguyen Van A", age: 28, position: "Backend Developer", skills: "Node.js, Express, MongoDB", experience: "5 years", image:"./src/assets/cnphat.jpg" },
-    { id: 2, name: "Tran Thi B", age: 26, position: "Frontend Developer", skills: "React, Vue, CSS", experience: "4 years", image: "./src/assets/cnphat.jpg" },
-    { id: 3, name: "Le Van C", age: 30, position: "Full Stack Developer", skills: "React, Node.js, PostgreSQL", experience: "6 years", image: "./src/assets/cnphat.jpg" },
-    { id: 4, name: "Pham Thi D", age: 24, position: "UI/UX Designer", skills: "Figma, Adobe XD, CSS", experience: "3 years", image: "./src/assets/cnphat.jpg" },
-    { id: 5, name: "Bui Van E", age: 29, position: "Mobile Developer", skills: "React Native, Flutter", experience: "5 years", image: "./src/assets/cnphat.jpg" },
+    { id: 1, name: "Châu Nhuận Phát", age: 28, position: "Backend Developer", skills: "C# ASP.NET", experience: "5 years", image:"./src/assets/cnphat.jpg" },
+    { id: 2, name: "Nhuận Phát Châu", age: 26, position: "Frontend Developer", skills: "ReactJS", experience: "4 years", image: "./src/assets/cnphat.jpg" },
+    { id: 3, name: "Phát Châu Nhuận", age: 30, position: "Full Stack Developer", skills: "ReactJS, ASP.NET, SQL Server", experience: "6 years", image: "./src/assets/cnphat.jpg" },
+    { id: 4, name: "ファット", age: 24, position: "UI/UX Designer", skills: "Photoshop, Adobe", experience: "3 years", image: "./src/assets/cnphat.jpg" },
+    { id: 5, name: "チャウ・ニュアン・ファット", age: 29, position: "Tester", skills: "Automatino Testing", experience: "5 years", image: "https://i.imgur.com/pCcHWXy.jpeg" },
   ];
   export default teamMembers;
   

@@ -213,3 +213,108 @@ div[role="toolbar"],
     text-align: center;
     font-family: monospace;
 }
+.pls-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.pls-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pls-bar {
+  width: 60%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.pls-progress {
+  height: 100%;
+  background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc);
+  background-size: 600% 600%;
+  animation: loadWidth linear forwards, gradientShift ease infinite;
+}
+
+@keyframes loadWidth {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.app-container {
+  padding: 24px;
+  text-align: center;
+}
+.team-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.team-avatar {
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.team-card:hover .team-avatar {
+  transform: scale(1.1);
+}
+/* Skill card animation */
+.skill-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s forwards ease-out;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* tạo hiệu ứng load dần */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* hover animation */
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+

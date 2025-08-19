@@ -3,14 +3,21 @@ import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white text-center py-3">
-      <div className="container">
-        <p>Châu Nhuận Phát</p>
-        <div>
-          <a href="www.facebook.com/cnphat.157" className="text-white me-3"><FaFacebook size={24} /></a>
-          <a href="#" className="text-white me-3"><FaLinkedin size={24} /></a>
-          <a href="#" className="text-white"><FaGithub size={24} /></a>
+   <footer className="footer">
+      <div className="footer-container">
+        <h2 className="footer-name">Châu Nhuận Phát</h2>
+        <div className="footer-social">
+          <a href="https://www.facebook.com/cnphat.157" target="_blank" rel="noreferrer">
+            <FaFacebook />
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
         </div>
+        <p className="footer-copy">© 2025 | All Rights Reserved</p>
       </div>
     </footer>
   );

@@ -15,7 +15,7 @@ import ProgressBar from "./components/ProgressBar";
 function App() {
   return (  
     <div className="bg-header w-100">
-      <ProgressBar duration={2000} height={30}>
+      <ProgressBar duration={1000} height={30} text="Welcome to Phat's Website....">
       <SlideBarToggle/>
       <Navbar />
       <Header />

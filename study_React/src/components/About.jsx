@@ -11,7 +11,7 @@ function About() {
 
       <ImageSlider/>
     </section>
-
+    
   );
 }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../main.css";
 
-export default function PageLoadScreen({ duration = 2000, height = 20, children }) {
+export default function PageLoadScreen({ duration = 2000, height = 20,text = "Loading...", children }) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -18,9 +18,11 @@ export default function PageLoadScreen({ duration = 2000, height = 20, children 
             style={{ animationDuration: `${duration}ms, ${Math.max(2000, duration * 1.5)}ms` }}
           />
         </div>
+        <h1 className="pls-text">{text}</h1>
       </div>
     );
   }
+
 
   return <>{children}</>;
 }

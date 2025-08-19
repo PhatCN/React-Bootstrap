@@ -6,31 +6,113 @@
 {
     background-color: rgba(0,0,128, 0.75)
 }
-.bgr-header{
-    background: linear-gradient(to bottom, #d32a2a, #db820e);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-    position: relative;
-    overflow: hidden;
+.header {
+  position: relative;
+  background: linear-gradient(135deg, #6f42c1, #d63384);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.bgr-header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: fadeIn 1.2s ease-in-out;
-  }
-.bgr-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    opacity: 0.9;
-    animation: fadeIn 1.5s ease-in-out;
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6); /* mờ nền */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-/* Hiệu ứng xuất hiện mượt */
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ffcc70, #ff8177, #b721ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+/* Typing effect */
+.typing-text {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+.fade-in-text {
+  font-size: 1.1rem;
+  color: #ffd54f;
+  margin-top: 15px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in 1s forwards;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ffca2c;
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 120, 180, 0.5);
+}
+
+/* Shape divider (bottom wave) */
+.custom-shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: url("data:image/svg+xml;base64,...") no-repeat bottom;
+  background-size: cover;
+}
+
+/* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .team-member-img {
     margin-top: -60px;
@@ -136,93 +218,177 @@
     color:yellow;
     background-color: red;
 }
+/* timeline */
+.timeline-container {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e0e7ff, #f5f5fa);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-.timeline-card {
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* thêm hiệu ứng trang trí */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(99,102,241,0.2), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(236,72,153,0.2), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.timeline-container h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #6c5ce7;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: #6c5ce7;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  animation: growLine 2s ease-in-out forwards;
+}
+
+/* item */
+.timeline-item {
+  position: relative;
+  width: 45%;
   padding: 20px;
-  margin: 10px; 
-  color: #333;
-  position: relative; 
-  min-width: 250px;
-  max-width: 350px;
-  height: 300px;
-  font-family: sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.timeline-card-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 15px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  margin: -20px -20px 20px -20px; 
-  padding-top: 20px;
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
 }
 
-.timeline-card-icon-circle {
-  width: 50px; 
-  height: 50px;
-  border-radius: 50%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+.timeline-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
 }
 
-.timeline-card-icon {
-  width: 30px; 
-  height: 30px;
-  fill: white;
+.timeline-item:nth-child(odd) .timeline-content {
+  transform: translateX(-30px);
+}
+.timeline-item:nth-child(even) .timeline-content {
+  transform: translateX(30px);
 }
 
-.timeline-card-year {
-  font-size: 1.8em; 
+/* mốc tròn */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: #6c5ce7;
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline-item:nth-child(even)::before {
+  left: -10px;
+  right: auto;
+}
+
+.timeline-year {
   font-weight: bold;
-  color: #fff;
-  margin: 0;
+  color: #6c5ce7;
+  font-size: 1.2rem;
 }
 
-.timeline-card-main-text {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #333; 
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.timeline-card-description {
-  font-size: 0.9em;
-  line-height: 1.5;
-  color: #555;
-}
-.timeline-component{
-  width: '100%';
-  height: 'auto'; 
-  margin: '50px auto';
-}
-div[role="toolbar"],
-.chrono-toolbar,
-.custom-toolbar-classname {
-  display: none !important;
-}
-.timeline-header-title{
-    font-size: 2rem;
-    text-align: center;
-    font-family: monospace;
-}
-.pls-overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  z-index: 9999;
+/* hiệu ứng hiện dần */
+.timeline-item.show .timeline-content {
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transform: translateX(0) translateY(0);
+}
+.timeline-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-left: 5px solid #6f42c1; /* viền tím khi hover */
+  box-shadow: 0 10px 20px rgba(111, 66, 193, 0.3);
+}
+
+/* Animation cho text khi hover */
+.timeline-item:hover .timeline-content h3 {
+  color: #6f42c1;
+  transition: color 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content p {
+  color: #444;
+  transition: color 0.3s ease;
+}
+@keyframes growLine {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+
+/* progress bar */
+.pls-overlay {
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* sắp xếp theo cột */
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  z-index: 9999;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 }
 
 .pls-overlay.fade-out {
@@ -244,6 +410,18 @@ div[role="toolbar"],
   background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc);
   background-size: 600% 600%;
   animation: loadWidth linear forwards, gradientShift ease infinite;
+}
+.pls-text {
+  margin-top: 20px; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFD700;
+  animation: blink 1.5s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
 
 @keyframes loadWidth {
@@ -278,7 +456,7 @@ div[role="toolbar"],
 .team-card:hover .team-avatar {
   transform: scale(1.1);
 }
-/* Skill card animation */
+
 .skill-card {
   opacity: 0;
   transform: translateY(30px);
@@ -299,7 +477,7 @@ div[role="toolbar"],
   animation: fadeIn 0.8s ease forwards;
 }
 
-/* tạo hiệu ứng load dần */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -311,10 +489,133 @@ div[role="toolbar"],
   }
 }
 
-/* hover animation */
+
 .skill-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+.footer {
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ffdd57);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
 
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.footer-name:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-social {
+  margin: 15px 0;
+}
+
+.footer-social a {
+  font-size: 28px;
+  margin: 0 15px;
+  color: white;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffdd57;
+  transform: scale(1.3);
+  text-shadow: 0 0 10px #ffdd57, 0 0 20px #ffdd57;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+/* Animated gradient background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} 
+/* Tiêu đề section */
+.projects-section {
+   background: linear-gradient(135deg, #2193b0, #6dd5ed) !important; /* xanh biển đậm */
+  padding: 60px 0;
+  color: #fff; /* chữ trắng nổi bật */
+}
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card style */
+.project-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.project-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.project-footer {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #888;
+}

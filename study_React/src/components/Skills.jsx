@@ -3,7 +3,6 @@ import { FaReact, FaJava, FaDatabase } from "react-icons/fa";
 import { SiJavascript, SiBootstrap, SiCss3 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
 
-
 const skills = [
   { name: "React.js", icon: <FaReact color="#61DBFB" size={50} /> },
   { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" size={50} /> },
@@ -16,19 +15,23 @@ const skills = [
 
 function Skills() {
   return (
-    <div className="container text-center my-5">
-      <h2 className="mb-4">Skills</h2>
-      <div className="row justify-content-center">
-        {skills.map((skill, index) => (
-          <div key={index} className="col-6 col-md-3 mb-4">
-            <div className="p-3 border rounded shadow-sm skill-card">
-              {skill.icon}
-              <p className="mt-2 fw-bold">{skill.name}</p>
-            </div>
+  <div className="skills-section text-center my-5">
+  <div className="container">
+    <h2 className="skills-title mb-5">My Skills</h2>
+    <div className="row row-cols-2 row-cols-md-4 g-4">
+      {skills.map((skill, index) => (
+        <div key={index} className="col">
+          <div className="p-4 border rounded shadow-sm skill-card h-100">
+            {skill.icon}
+            <p className="mt-3 fw-bold">{skill.name}</p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
+  </div>
+</div>
+
+
   );
 }
 

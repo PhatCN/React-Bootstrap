@@ -5,7 +5,7 @@ function Header() {
     <header className="header text-white text-center">
       <div className="overlay">
         <div className="container">
-          <h1 className="header-title">C N P</h1>
+          <h1 className="header-title">CHAU NHUAN PHAT</h1>
           <p className="lead typing-text">
             Kĩ sư gia công phần mềm | WebApp | PC App | Android - iOS App
           </p>

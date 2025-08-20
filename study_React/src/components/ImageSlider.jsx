@@ -1,25 +1,29 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Thumbs, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import "../main.css";
-import dataSilde from "../data/dataSilde.js"
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+
+import dataSilde from "../data/dataSilde.js";
 
 const ImageSlider = () => {
   return (
     <div className="slider-container">
-      {/* Main Slider */}
       <Swiper
         loop={true}
-        modules={[Navigation,Thumbs, Pagination, Autoplay]}
+        modules={[Navigation, Pagination, Autoplay, EffectFade]}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
-      }}
-      navigation={true}
-      pagination={{ clickable: true }}
+        }}
+        navigation
+        pagination={{ clickable: true }}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        speed={1200}
         className="swiper-container"
       >
         {dataSilde.map((slide, index) => (

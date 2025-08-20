@@ -3,9 +3,9 @@ import teamData from "../data/datateam.js";
 
 function Team() {
   return (
-    <section id="team" className="my-5 text-center w-100">
+    <section id="team" className="team-section my-5 text-center w-100">
       <div className="container">
-        <h2 className="mb-5 pb-3">Our Team</h2>
+        <h2 className="team-title mb-5 pb-3 text-white">Our Team</h2>
         <div className="row justify-content-center">
           {teamData.map((member, index) => (
             <div key={index} className="col-md-4 mb-5 d-flex align-items-stretch">
